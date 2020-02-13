@@ -31,6 +31,10 @@ class CachingWriter {
 
     private boolean autoLatching = true;
 
+    public void disableAutoLatching() {
+        autoLatching = false;
+    };
+
     public String compressTimestamp(int year, int month, int dayOfMonth, int hour,
                                     int minute, int second, int millisecond) {
         seenYear = year;
