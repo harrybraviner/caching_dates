@@ -2,7 +2,6 @@ package braviner.caching_dates;
 
 import org.junit.Assert;
 import org.junit.Test;
-import sun.util.calendar.ZoneInfo;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
