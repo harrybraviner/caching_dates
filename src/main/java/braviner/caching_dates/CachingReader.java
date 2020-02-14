@@ -8,7 +8,6 @@ abstract class CachingReader<T> {
     // If we haven't seen a date then we need a full date to be able to do a valid read.
     private boolean anyDateSeenYet = false;
 
-
     // These values are updated to reflect the most recent time read.
     private int prevYear = 0;
     private int prevMonth = 0;
@@ -29,7 +28,7 @@ abstract class CachingReader<T> {
             Pattern.compile("(\\d{3})");
 
 
-    public T decompressTimestamp(String timestamp) {
+    public final T decompressTimestamp(String timestamp) {
         if (!anyDateSeenYet && timestamp.length() != 23) {
             throw new IllegalArgumentException("Unable to parse \"" + timestamp + "\" as a full timestamp, "
                 + "and we have not yet read a timestamp.");
