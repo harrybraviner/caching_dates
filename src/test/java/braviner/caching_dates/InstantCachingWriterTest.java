@@ -12,6 +12,7 @@ public class InstantCachingWriterTest {
 
     private static final ZoneId testingTimezone = ZoneId.of("America/Toronto");
 
+    @SuppressWarnings("SameParameterValue")
     private Instant makeInstant(int year, int month, int dayOfMonth, int hour, int minute, int second, int millisecond) {
         return ZonedDateTime.of(
                 LocalDateTime.of(year, month, dayOfMonth, hour, minute, second, millisecond*1_000_000),
